@@ -1,0 +1,182 @@
+<script>
+
+var seleccion = parseInt(prompt("Selecciona El Numero De Camion para ver su Registro de 1 a 10"));
+
+var numeroRegistro = [1111,2222,3333,4444,5555,6666,7777,8888,9999,10101010];
+
+var conductor ={
+    "conductor1":"Miguel",
+    "conductor2":"Diana",
+    "conductor3":"Enrique",
+    "conductor4":"Kevin",
+    "conductor5":"Dario",
+}
+
+var camion1 = {
+
+    "Camion": "Numero1",
+    "NumeroDePasajeros": "38 Pasajeros",
+    "Aforo": "50 asientos",
+    "Salida": "CDMX",
+    "Destino": "Monterrey",
+    "NumeroDeRegistro": numeroRegistro[0],
+    "Conductor" : conductor["conductor1"],
+}
+var camion2 = {
+
+    "Camion": "Numero2",
+    "NumeroDePasajeros": "30 Pasajeros",
+    "Aforo": "60 asientos",
+    "Salida": "CDMX",
+    "Destino": "Guadalajara",
+    "NumeroDeRegistro": numeroRegistro[1],
+    "Conductor" : conductor["conductor2"],
+
+}
+var camion3 = {
+
+    "Camion": "Numero3",
+    "NumeroDePasajeros": "25 Pasajeros",
+    "Aforo": "70 asientos",
+    "Salida": "CDMX",
+    "Destino": "Hidalgo",
+    "NumeroDeRegistro": numeroRegistro[2],
+    "Conductor" : conductor["conductor3"],
+
+}
+
+var camion4 = {
+
+    "Camion": "Numero4",
+    "NumeroDePasajeros": "25 Pasajeros",
+    "Aforo": "60 asientos",
+    "Salida": "Monterrey",
+    "Destino": "Yucatan",
+    "NumeroDeRegistro": numeroRegistro[3],
+    "Conductor" : conductor["conductor4"],
+
+}
+
+
+var camion5 = {
+
+    "Camion": "Numero5",
+    "NumeroDePasajeros": "10 Pasajeros",
+    "Aforo": "30 asientos",
+    "Salida": "Monterrey",
+    "Destino": "Jalisco",
+    "NumeroDeRegistro": numeroRegistro[4],
+    "Conductor" : conductor["conductor5"],
+
+}
+
+var camion6 = {
+
+    "Camion": "Numero6",
+    "NumeroDePasajeros": "25 Pasajeros",
+    "Aforo": "60 asientos",
+    "Salida": "CDMX",
+    "Destino": "Yucatan",
+    "NumeroDeRegistro": numeroRegistro[5],
+    "Conductor" : conductor["conductor1"],
+
+}
+
+var camion7 = {
+
+"Camion": "Numero7",
+"NumeroDePasajeros": "8 Pasajeros",
+"Aforo": "10 asientos",
+"Salida": "Monterrey",
+"Destino": "CDMX",
+"NumeroDeRegistro": numeroRegistro[6],
+"Conductor" : conductor["conductor2"],
+
+}
+
+var camion8 = {
+
+"Camion": "Numero8",
+"NumeroDePasajeros": "25 Pasajeros",
+"Aforo": "30 asientos",
+"Salida": "Monterrey",
+"Destino": "Yucatan",
+"NumeroDeRegistro": numeroRegistro[7],
+"Conductor" : conductor["conductor3"],
+
+}
+
+var camion9 = {
+
+"Camion": "Numero9",
+"NumeroDePasajeros": "25 Pasajeros",
+"Aforo": "60 asientos",
+"Salida": "Monterrey",
+"Destino": "Puebla",
+"NumeroDeRegistro": numeroRegistro[8],
+"Conductor" : conductor["conductor4"],
+
+}
+
+var camion10 = {
+
+"Camion": "Numero10",
+"NumeroDePasajeros": "25 Pasajeros",
+"Aforo": "60 asientos",
+"Salida": "Monterrey",
+"Destino": "Hidalgo",
+"NumeroDeRegistro": numeroRegistro[2],
+"Conductor" : conductor["conductor3"],
+
+}
+
+
+if (seleccion <= 10) {
+    switch (seleccion) {
+    case 1:
+        console.log(camion1);       
+    break;
+    case 2:
+        console.log(camion2);
+    break;
+    case 3:
+        console.log(camion3);       
+    break;
+    case 4:
+        console.log(camion4);
+    break;
+    case 5:
+        console.log(camion5);       
+    break;
+    case 6:
+        console.log(camion6);
+    break;
+    case 7:
+        console.log(camion7);       
+    break;
+    case 8:
+        console.log(camion8);
+    break;
+    case 9:
+        console.log(camion9);       
+        break;
+    case 10:
+        console.log(camion10);
+        break;
+    default:
+    break;
+}
+} else {
+    console.log("Ingresa un valor del 1 al 10");
+    
+}
+
+
+
+
+
+
+
+
+
+</script>

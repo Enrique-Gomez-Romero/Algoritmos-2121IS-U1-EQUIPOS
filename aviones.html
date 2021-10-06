@@ -1,0 +1,74 @@
+<script>
+
+var asientos = [0,1,2,3,4,5]
+var destino = ["0","Japon","China","Canada","Rusia","Italia"];
+var salida = ["0","Japon","China","Canada","Rusia","Italia"];
+var horaSalida = [0,"13:30","02:00","02:30","03:30","04:00"];
+var horaLlegada = [0,"04:00","03:30","02:30","02:00","13:30"];
+
+var aeorilinia1 = {
+
+"Destino ": destino[1],
+"Sale De ": salida[1],
+"Hora de Salida ": horaSalida[1],
+"Hora de LLegada aproximada ": horaLlegada[1],
+}
+var aeorilinia2 = {
+
+"Destino ": destino[2],
+"Sale De ": salida[2],
+"Hora de Salida ": horaSalida[2],
+"Hora de LLegada aproximada ": horaLlegada[2],
+}
+var aeorilinia3 = {
+
+"Destino ": destino[3],
+"Sale De ": salida[3],
+"Hora de Salida ": horaSalida[3],
+"Hora de LLegada aproximada ": horaLlegada[3],
+}
+var aeorilinia4 = {
+
+"Destino ": destino[4],
+"Sale De ": salida[4],
+"Hora de Salida ": horaSalida[4],
+"Hora de LLegada aproximada ": horaLlegada[4],
+}
+var aeorilinia5 = {
+
+"Destino ": destino[5],
+"Sale De ": salida[5],
+"Hora de Salida ": horaSalida[5],
+"Hora de LLegada aproximada ": horaLlegada[5],
+}
+
+var selecciona = (prompt("Dime que Aerolinia quieres escojer"+'\n'+
+"aeorilina1"+'\n'+"aeorilina2"+'\n'+"aeorilina3"+'\n'+"aeorilina4"+'\n'+"aeorilina5"));
+var comparar = "aeorilina1"||"aeorilina2"||"aeorilina3"||"aeorilina4"||"aeorilina5";
+
+
+
+
+switch (selecciona) {
+    case "aeorilina1":
+        console.log(aeorilinia1);
+        break;
+    case "aeorilina2":
+        console.log(aeorilinia2);
+        break;
+    case "aeorilina3":
+        console.log(aeorilinia3);
+        break;
+    case "aeorilina4":
+        console.log(aeorilinia4);
+        break;
+    case "aeorilina5":
+        console.log(aeorilinia5);
+        break;               
+    default:
+        break;
+}
+
+
+
+</script>
