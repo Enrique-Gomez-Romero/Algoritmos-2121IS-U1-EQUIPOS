@@ -1,0 +1,24 @@
+<script>
+
+var nom=[];
+var nUsuarios = parseInt(prompt("ingresa un Numero ")); 
+for (var i=0;i < nUsuarios; i++) 
+{
+    var nombre = prompt("Ingresa Nombre ");
+    var direccion = prompt("Ingresa Direccion ");
+    nom.push("Nombre: "+nombre+","+" Direccion: "+direccion);   
+}
+console.log("Registros");
+console.log(nom);
+for(var a = 0;a < 3; a++)
+{
+    var aleatorio = Math.floor(Math.random()*nom.length);
+    var persona =
+    {
+        "nombre":nom[aleatorio], 
+    }
+}
+console.log("!Ganador del Sorteo!");
+console.log(persona);
+
+</script>

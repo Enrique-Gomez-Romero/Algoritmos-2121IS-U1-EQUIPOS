@@ -1,0 +1,24 @@
+<script>
+    var num = parseInt(prompt("ingresa un numero"));
+    imprimir(num);
+   
+   function imprimir(numero) {
+       
+      
+      const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      var caracter = abc.length;
+      for ( var i = 1; i <= num; i++ ) {  
+       var texto = "";  
+         for(var repeticion = 1;repeticion <= i;repeticion++){
+           var n = Math.floor(Math.random()*caracter);
+           texto += abc[n];
+           
+         }
+         console.log(texto);
+         
+      }
+      
+     
+   }
+      
+      </script>

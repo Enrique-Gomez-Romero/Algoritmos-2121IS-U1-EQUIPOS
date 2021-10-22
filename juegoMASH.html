@@ -1,0 +1,38 @@
+<script>
+numero = 1;
+
+mash();
+function mash() {
+    let conquien =["Carlos","Roberto","Saul", "Enrqiue","Pelos","Karen","Diana","Lupita","Itzel","Jimena"];
+    let donde =["En una casa","En la playa","En el basusero","En una farmacia","En la calle","por el civil","En un estadio de futbol","En la casa de tu suegra","En Tepito","En nunca jamas"];
+    let aQueEdad = ["18", "19", "20", "21", "22", "23", "24", "25", "26", "27"];
+    let lunaDeMiel = ["Playa", "Desierto", "Bosque", "Hotel", "Casa", "nieve", "Ciudad", "Barco", "Auto","Fiesta"];
+    let viaje=["Acapulco","Cancun","Veracruz","Puerto Vallarta","Playa del Carmen","Costa Smeralda","Paris","charco","basurero","Laguna"];
+    let hogar=["casa","Mansion","Choza","Vecindad","Caja","Puente","Calle","Departamento","Edificio","Casa de la Suegra"];
+
+    for(var i = 0;i < numero; i++)
+    {
+        let r1 = Math.floor(Math.random()*conquien.length);
+        let r2 = Math.floor(Math.random()*donde.length);
+        let r3 = Math.floor(Math.random()*aQueEdad.length);
+        let r4 = Math.floor(Math.random()*lunaDeMiel.length);
+        let r5 = Math.floor(Math.random()*viaje.length); 
+        let r6 = Math.floor(Math.random()*hogar.length);
+
+        var resultado ={
+            "Te Casas con ":conquien[r1] ,
+            "Donde Te vas a Casar ":donde[r2] ,
+            "A que edad te vas a casar ":aQueEdad[r3] ,
+            "Tu Luna de miel sera en " :lunaDeMiel[r4] ,
+            "Vas a Viajar en ":viaje[r5] ,
+            "Donde vas a viajar ":hogar[r6] ,
+        }
+        console.log(resultado);
+
+    }
+}
+
+
+
+
+</script>
