@@ -1,0 +1,163 @@
+<script>
+let listaAlumno = [0]; 
+let grupo2121 =[0];
+let grupo1121=[0];
+
+const alumno = {
+    nombre:'',
+    matricula:'',
+    grupo:'',
+    sexo:'',
+    calificacion:''
+}
+
+  let hombres = 0;
+  let mujeres = 0;
+  let totalCalif = 0;
+  let totalAlumnos = 0;
+  let mediaCalif = 0;
+
+  inicio();
+
+  function inicio() {
+    opcion = parseInt(
+      prompt(
+        "ingresa el numero de la opcion que quieres realizar" +
+          "\n" +
+          "1.- Registrar alumno" +
+          "\n" +
+          "2.- Total de alumnos" +
+          "\n" +
+          "3.- Calcular alumnos por Genero" +
+          "\n" +
+          "4.- Calcular media de Calificaciones" +
+          "\n" +
+          "5.- Buscar Alumno" +
+          "\n" +
+          "6.- Conjunto De Alumos" +
+          "\n" +
+          "7.- Imprimir Grupos"+
+          "\n" +
+          "8 .- salir"
+      )
+    );
+
+    switch (opcion) {
+      case 1:
+        registro();
+        break;
+      case 2:
+        calcularAlumnos();
+        break;
+      case 3:
+        calcularGenero();
+        break;
+      case 4:
+        media();
+        break;
+      case 5:
+        especificoAlumno();
+        break;
+      case 6:
+        conjuntoAlumno();
+        break;
+      case 7:
+       gruposLista();
+        break;
+      case 8:
+        break;
+      default:
+        break;
+    }
+  }
+
+  function registro() {
+    let nAlumnos = prompt("Ingresa el número de alumnos que deseas registrar");
+    for (let i = 1; i <= nAlumnos; i++) {
+      console.log("Alumno " + [i]);
+      let ingresaNombre = prompt("Ingresa El Nombre del Alumno " + [i]);
+      let ingresaMatricula = alert("La Matricula Generada es " + [i]);
+      ingresaMatricula = i
+      let ingresaGrupo = prompt("Selecciona a que Grupo lo quieres meter"+"\n" +"2121is"+"\n" +"1121is");
+      let ingresaSexo = prompt(
+        "ingresa el sexo" + "\n" + "H: Hombre" + "\n" + "M: Mujer"
+      );
+      let ingresaCalificacion = prompt("Ingresa calificacion");
+      if (ingresaSexo === "H") {
+        hombres = hombres + 1;
+      } else {
+        mujeres = mujeres + 1;
+      }
+
+      if (ingresaGrupo == "2121is") {
+
+        grupo2121.push("2121is "+ingresaNombre+" Matricula: "+ingresaMatricula+" Grupo: "+ingresaGrupo+" Calificacion: "+ingresaCalificacion);
+
+      }else{
+
+        grupo1121.push("1121is "+ingresaNombre+" Matricula: "+ingresaMatricula+" Grupo: "+ingresaGrupo+" Calificacion: "+ingresaCalificacion);
+      }
+
+
+      alumno.nombre=ingresaNombre;
+      alumno.matricula=ingresaMatricula;
+      alumno.grupo=ingresaGrupo;
+      alumno.sexo=ingresaSexo;
+      alumno.calificacion=ingresaCalificacion;
+      listaAlumno.push(ingresaNombre+" Matricula: "+ingresaMatricula+" Grupo: "+ingresaGrupo+" Calificacion: "+ingresaCalificacion);
+      console.log(listaAlumno);
+      totalCalif = parseFloat(ingresaCalificacion) + parseFloat(totalCalif);
+    }
+    mediaCalif = parseFloat(totalCalif) / parseFloat(nAlumnos);
+    totalAlumnos = parseFloat(totalAlumnos) + parseFloat(nAlumnos);
+    inicio();
+  }
+
+
+  function calcularGenero() {
+    console.log("El numero total de hombres registrados son: ", hombres);
+    console.log("El numero total de mujeres registradas son: ", mujeres);
+    inicio();
+  }
+
+
+  function calcularAlumnos() {
+    console.log(totalAlumnos);
+    inicio();
+  }
+
+
+  function media() {
+    console.log("La media es: " + mediaCalif);
+    inicio();
+  }
+
+
+  function especificoAlumno() {
+    let numeroSeleccion = parseFloat(prompt("Ingresa el Numero de posicion del registro que quieres de Alumno"));
+    console.log(listaAlumno[numeroSeleccion]);
+    inicio();
+    } 
+    
+  function conjuntoAlumno() {
+
+    let numero = parseInt(prompt("ingresa el Numero De Alumnos del que quiere hacer el conjunto"))
+
+    for(let i = 0;i < numero; i++){
+      let numeroID = parseFloat(prompt("Ingresa el Numero de posicion del registro que quieres buscar de Alumno"));
+      console.log(listaAlumno[numeroID]);
+    }
+    inicio();
+  }
+
+  function gruposLista() {
+    console.log(grupo1121);
+    console.log("Estos son el total de Integrantes del grupo 1121IS: "+grupo1121.length);
+    console.log(grupo2121);
+    console.log("Estos son el total de Integrantes del grupo 2121IS: "+grupo2121.length);
+    inicio;
+    
+  }
+
+
+</script>
